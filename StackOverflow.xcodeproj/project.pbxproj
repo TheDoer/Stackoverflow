@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F101B5B8270339A000E3DD28 /* QuestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101B5B7270339A000E3DD28 /* QuestionsTableViewCell.swift */; };
 		F11B649326FCA545005D5D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B649226FCA545005D5D51 /* AppDelegate.swift */; };
 		F11B649526FCA545005D5D51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B649426FCA545005D5D51 /* SceneDelegate.swift */; };
 		F11B649726FCA545005D5D51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B649626FCA545005D5D51 /* ViewController.swift */; };
@@ -15,7 +16,11 @@
 		F11B649F26FCA546005D5D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11B649D26FCA546005D5D51 /* LaunchScreen.storyboard */; };
 		F11B64AA26FCA547005D5D51 /* StackOverflowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B64A926FCA547005D5D51 /* StackOverflowTests.swift */; };
 		F11B64B526FCA547005D5D51 /* StackOverflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B64B426FCA547005D5D51 /* StackOverflowUITests.swift */; };
+		F1DF49A027050D4B00394617 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DF499F27050D4B00394617 /* QuestionViewController.swift */; };
 		F1E6F4022701EE480094B7D6 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6F4012701EE480094B7D6 /* APICaller.swift */; };
+		F1F9F8A22709E07C00CC5502 /* QuestionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */; };
+		F1F9F8A42709E0AC00CC5502 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */; };
+		F1F9F8A6270B91F300CC5502 /* QuestionsDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F8A5270B91F300CC5502 /* QuestionsDataTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F101B5B7270339A000E3DD28 /* QuestionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCell.swift; sourceTree = "<group>"; };
 		F11B648F26FCA545005D5D51 /* StackOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11B649226FCA545005D5D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F11B649426FCA545005D5D51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +56,11 @@
 		F11B64B026FCA547005D5D51 /* StackOverflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11B64B426FCA547005D5D51 /* StackOverflowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowUITests.swift; sourceTree = "<group>"; };
 		F11B64B626FCA547005D5D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1DF499F27050D4B00394617 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		F1E6F4012701EE480094B7D6 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionDetails.storyboard; sourceTree = "<group>"; };
+		F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailsViewController.swift; sourceTree = "<group>"; };
+		F1F9F8A5270B91F300CC5502 /* QuestionsDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDataTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +114,15 @@
 				F11B649226FCA545005D5D51 /* AppDelegate.swift */,
 				F11B649426FCA545005D5D51 /* SceneDelegate.swift */,
 				F11B649626FCA545005D5D51 /* ViewController.swift */,
+				F1DF499F27050D4B00394617 /* QuestionViewController.swift */,
+				F101B5B7270339A000E3DD28 /* QuestionsTableViewCell.swift */,
 				F1E6F4012701EE480094B7D6 /* APICaller.swift */,
 				F11B649826FCA545005D5D51 /* Main.storyboard */,
+				F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */,
 				F11B649B26FCA546005D5D51 /* Assets.xcassets */,
 				F11B649D26FCA546005D5D51 /* LaunchScreen.storyboard */,
 				F11B64A026FCA546005D5D51 /* Info.plist */,
+				F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */,
 			);
 			path = StackOverflow;
 			sourceTree = "<group>";
@@ -118,6 +132,7 @@
 			children = (
 				F11B64A926FCA547005D5D51 /* StackOverflowTests.swift */,
 				F11B64AB26FCA547005D5D51 /* Info.plist */,
+				F1F9F8A5270B91F300CC5502 /* QuestionsDataTest.swift */,
 			);
 			path = StackOverflowTests;
 			sourceTree = "<group>";
@@ -237,6 +252,7 @@
 				F11B649F26FCA546005D5D51 /* LaunchScreen.storyboard in Resources */,
 				F11B649C26FCA546005D5D51 /* Assets.xcassets in Resources */,
 				F11B649A26FCA545005D5D51 /* Main.storyboard in Resources */,
+				F1F9F8A22709E07C00CC5502 /* QuestionDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +279,9 @@
 			files = (
 				F11B649726FCA545005D5D51 /* ViewController.swift in Sources */,
 				F11B649326FCA545005D5D51 /* AppDelegate.swift in Sources */,
+				F1F9F8A42709E0AC00CC5502 /* QuestionDetailsViewController.swift in Sources */,
+				F1DF49A027050D4B00394617 /* QuestionViewController.swift in Sources */,
+				F101B5B8270339A000E3DD28 /* QuestionsTableViewCell.swift in Sources */,
 				F11B649526FCA545005D5D51 /* SceneDelegate.swift in Sources */,
 				F1E6F4022701EE480094B7D6 /* APICaller.swift in Sources */,
 			);
@@ -273,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11B64AA26FCA547005D5D51 /* StackOverflowTests.swift in Sources */,
+				F1F9F8A6270B91F300CC5502 /* QuestionsDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
