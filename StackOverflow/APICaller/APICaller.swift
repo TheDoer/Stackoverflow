@@ -11,38 +11,11 @@ final class APICaller {
     static let shared = APICaller()
     
     struct Constants {
-        static let stackOverflowURL = URL(string: "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&tagged=swift%203&site=stackoverflow&filter=withbody")
         
         static let searchURLString =  "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&site=stackoverflow&filter=withbody&tagged="
     }
    
     private init() {}
-    
-    public func getQuestions(completion: @escaping (Result<[Item], Error>) -> Void) {
-        guard let url = Constants.stackOverflowURL else {
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            if let error = error {
-                completion(.failure(error))
-            }
-            
-            else if let data = data {
-                do {
-                    let result = try JSONDecoder().decode(APIResponse.self, from: data)
-                    print("Questions: \(result.items.count)")
-                    completion(.success(result.items))
-                }
-                catch {
-                    completion(.failure(error))
-            }
-        }
-    }
-        
-    task.resume()
-        
-   }
-    
     
     public func searchWithTag(with query: String, completion: @escaping (Result<[Item], Error>) -> Void) {
         guard !query.trimmingCharacters(in: .whitespaces).isEmpty else {
