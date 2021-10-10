@@ -9,21 +9,13 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var selectedQuestion:Item!
     
     private let searchVC = UISearchController(searchResultsController: nil)
     private var questionDetails = [Item]()
     private var viewModels = [QuestionsTableViewCellViewModel]()
-    
-    private let stackoverflowSearch: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textColor = .systemBlue
-        label.text = "Stack Overflow Search"
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 14, weight: .medium)
-        return label
-    }()
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -33,16 +25,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }()
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-        tableView.separatorColor = .clear
-        view.addSubview(stackoverflowSearch)
-        view.sendSubviewToBack(stackoverflowSearch)
-        stackoverflowSearch.isUserInteractionEnabled = true
         
+        tableView.separatorColor = .clear
+        
+       
         tableView.delegate = self
         tableView.dataSource = self
         tableView.alpha = 0
@@ -59,8 +48,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
    private func createSearchBar(){
     navigationItem.searchController = searchVC
     searchVC.searchBar.delegate = self
-        
+    
+    
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
@@ -71,9 +63,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             withIdentifier: QuestionsTableViewCell.identifier,
             for: indexPath
         ) as? QuestionsTableViewCell else {
-            fatalError()
+            return UITableViewCell()
         }
-        cell.configure(with: viewModels[indexPath.row])
+        cell.configure(
+            with: viewModels[indexPath.row])
         return cell
     }
     

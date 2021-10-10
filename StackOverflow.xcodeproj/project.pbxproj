@@ -16,7 +16,8 @@
 		F11B649F26FCA546005D5D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11B649D26FCA546005D5D51 /* LaunchScreen.storyboard */; };
 		F11B64AA26FCA547005D5D51 /* StackOverflowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B64A926FCA547005D5D51 /* StackOverflowTests.swift */; };
 		F11B64B526FCA547005D5D51 /* StackOverflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B64B426FCA547005D5D51 /* StackOverflowUITests.swift */; };
-		F1DF49A027050D4B00394617 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DF499F27050D4B00394617 /* QuestionViewController.swift */; };
+		F13264412713517D0091BB65 /* QuestionsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13264402713517D0091BB65 /* QuestionsTableViewCellViewModel.swift */; };
+		F13264432713527F0091BB65 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13264422713527F0091BB65 /* QuestionsModel.swift */; };
 		F1E6F4022701EE480094B7D6 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6F4012701EE480094B7D6 /* APICaller.swift */; };
 		F1F9F8A22709E07C00CC5502 /* QuestionDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */; };
 		F1F9F8A42709E0AC00CC5502 /* QuestionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */; };
@@ -56,7 +57,8 @@
 		F11B64B026FCA547005D5D51 /* StackOverflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11B64B426FCA547005D5D51 /* StackOverflowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowUITests.swift; sourceTree = "<group>"; };
 		F11B64B626FCA547005D5D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1DF499F27050D4B00394617 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		F13264402713517D0091BB65 /* QuestionsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F13264422713527F0091BB65 /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
 		F1E6F4012701EE480094B7D6 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionDetails.storyboard; sourceTree = "<group>"; };
 		F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailsViewController.swift; sourceTree = "<group>"; };
@@ -111,18 +113,16 @@
 		F11B649126FCA545005D5D51 /* StackOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				F132643F271342990091BB65 /* Storyboards */,
+				F132643E271342910091BB65 /* View Controllers */,
+				F132643D271342870091BB65 /* Model */,
+				F132643C271342770091BB65 /* ViewModel */,
+				F132643B271342620091BB65 /* APICaller */,
 				F11B649226FCA545005D5D51 /* AppDelegate.swift */,
 				F11B649426FCA545005D5D51 /* SceneDelegate.swift */,
-				F11B649626FCA545005D5D51 /* ViewController.swift */,
-				F1DF499F27050D4B00394617 /* QuestionViewController.swift */,
 				F101B5B7270339A000E3DD28 /* QuestionsTableViewCell.swift */,
-				F1E6F4012701EE480094B7D6 /* APICaller.swift */,
-				F11B649826FCA545005D5D51 /* Main.storyboard */,
-				F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */,
 				F11B649B26FCA546005D5D51 /* Assets.xcassets */,
-				F11B649D26FCA546005D5D51 /* LaunchScreen.storyboard */,
 				F11B64A026FCA546005D5D51 /* Info.plist */,
-				F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */,
 			);
 			path = StackOverflow;
 			sourceTree = "<group>";
@@ -144,6 +144,49 @@
 				F11B64B626FCA547005D5D51 /* Info.plist */,
 			);
 			path = StackOverflowUITests;
+			sourceTree = "<group>";
+		};
+		F132643B271342620091BB65 /* APICaller */ = {
+			isa = PBXGroup;
+			children = (
+				F1E6F4012701EE480094B7D6 /* APICaller.swift */,
+			);
+			path = APICaller;
+			sourceTree = "<group>";
+		};
+		F132643C271342770091BB65 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F13264402713517D0091BB65 /* QuestionsTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F132643D271342870091BB65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F13264422713527F0091BB65 /* QuestionsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F132643E271342910091BB65 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F11B649626FCA545005D5D51 /* ViewController.swift */,
+				F1F9F8A32709E0AC00CC5502 /* QuestionDetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F132643F271342990091BB65 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F1F9F8A12709E07C00CC5502 /* QuestionDetails.storyboard */,
+				F11B649826FCA545005D5D51 /* Main.storyboard */,
+				F11B649D26FCA546005D5D51 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +323,8 @@
 				F11B649726FCA545005D5D51 /* ViewController.swift in Sources */,
 				F11B649326FCA545005D5D51 /* AppDelegate.swift in Sources */,
 				F1F9F8A42709E0AC00CC5502 /* QuestionDetailsViewController.swift in Sources */,
-				F1DF49A027050D4B00394617 /* QuestionViewController.swift in Sources */,
+				F13264432713527F0091BB65 /* QuestionsModel.swift in Sources */,
+				F13264412713517D0091BB65 /* QuestionsTableViewCellViewModel.swift in Sources */,
 				F101B5B8270339A000E3DD28 /* QuestionsTableViewCell.swift in Sources */,
 				F11B649526FCA545005D5D51 /* SceneDelegate.swift in Sources */,
 				F1E6F4022701EE480094B7D6 /* APICaller.swift in Sources */,

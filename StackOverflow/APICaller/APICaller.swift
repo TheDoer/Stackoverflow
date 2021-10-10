@@ -60,17 +60,6 @@ final class APICaller {
             else if let data = data {
                 do {
                     
-                    let epochTime = TimeInterval(1429162809359) / 1000
-                    let date = Date(timeIntervalSince1970: epochTime)   // "Apr 16, 2015, 2:40 AM"
-
-                    print("Converted Time: \(date)")         // "Converted Time 2015-04-16 05:40:09 +0000\n"
-                    
-//                    let dateFormatter = DateFormatter()
-//                    dateFormatter.calendar = Calendar(identifier: .gregorian)
-//                    dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-//                    dateFormatter.dateStyle = .medium
-//                    dateFormatter.dateFormat = "d, MMM , yyyy, HH:mm"
-                    
                     let formatter = DateFormatter()
                         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
                         formatter.calendar = Calendar(identifier: .iso8601)
@@ -98,34 +87,6 @@ final class APICaller {
    }
 }
 
-
-//Models
-
-struct APIResponse: Codable {
-    let items: [Item]
-}
-    struct Item: Codable {
-        let owner: Owner
-        //let tags: Tags
-        let title: String?
-        let body: String?
-        let score: Int?
-        let view_count: Int?
-        let creation_date: Date?
-        let answer_count: Int?
-        let is_answered: Bool?
-    }
-    
-    struct Owner: Codable {
-        let display_name: String?
-        let reputation: Int?
-        let profile_image: String?
-        
-    }
-
-//struct Tags: Codable {
-//    let tags: String?
-//}
     
 
 

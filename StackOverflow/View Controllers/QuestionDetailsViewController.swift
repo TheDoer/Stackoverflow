@@ -47,8 +47,13 @@ class QuestionDetailsViewController: UIViewController {
             //creationDate.text = "\(NewDate)"
            }
         
+
        questionTitle.text = detailsInfo.title
-       questionBody.text = detailsInfo.body
+        let str = detailsInfo.body
+        let NewQuestionBody = str!.trimHTMLTags()
+       questionBody.text = NewQuestionBody
+        
+        
 //        //profileImage.image = detailsInfo.
 //        displayName.text = detailsInfo.owner.display_name
 //        reputation.text = ("\(String(describing: detailsInfo.owner.reputation))")
@@ -58,7 +63,21 @@ class QuestionDetailsViewController: UIViewController {
         
         
     }
-     
+    
+}
 
-
+extension String {
+    public func trimHTMLTags() -> String? {
+        guard let htmlStringData = self.data(using: String.Encoding.utf8) else {
+            return nil
+        }
+    
+        let options: [NSAttributedString.DocumentReadingOptionKey : Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+    
+        let attributedString = try? NSAttributedString(data: htmlStringData, options: options, documentAttributes: nil)
+        return attributedString?.string
+    }
 }
